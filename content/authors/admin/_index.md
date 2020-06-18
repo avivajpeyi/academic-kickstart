@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Avi Vajpeyi
 
 # Username (this should match the folder name)
 authors:
@@ -10,32 +10,32 @@ authors:
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Astrophysics PhD Student 
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
-  url: ""
-
+- name: Monash University
+  url: "https://www.monash.edu/"
+- name: LIGO
+  url: "https://www.ligo.caltech.edu/"
+- name: OzGrav
+  url: "https://www.ozgrav.org/"
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research focuses on utilising Bayesian inference to the study gravitational waves from merging black holes.
 
 interests:
-- Artificial Intelligence
-- Computational Linguistics
+- Gravitational Wave Astrophysics
+- Bayesian Inference
 - Information Retrieval
 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: PhD in Astrophysics
+    institution: Monash University
+    year: -
+  - course: BA in Physics and Computer Science
+    institution: The College of Wooster
+    year: 2018
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -45,23 +45,26 @@ social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'  # For a direct email link, use "mailto:test@example.org".
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://scholar.google.com/citations?user=hP-8RuUAAAAJ&hl
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: http://github.com/avivajpeyi
+- icon: gitlab
+  icon_pack: fab
+  link: https://git.ligo.org/avi.vajpeyi
+- icon: itch-io
+  icon_pack: fab
+  link: https://avivajpeyi.itch.io/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+#  icon_pack: ai
+#  link: files/resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: "avi.vajpeyi@gmail.com"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
@@ -70,6 +73,4 @@ user_groups:
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+I am a PhD student at Monash University where I am researching gravitational waves as a member of the LIGO collaboration. My research focuses on utilising Bayesian inference to the study gravitational waves from merging black holes. More specifically, my research is on gravitational waves from intermediate-mass black holes -- an elusive class of black holes that astrophysicist have yet to detect! 
