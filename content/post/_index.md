@@ -11,4 +11,5 @@ view: 2
 header:
   caption: ""
   image: ""
+type: "widget_page"  # Page type is a Widget Page
 ---

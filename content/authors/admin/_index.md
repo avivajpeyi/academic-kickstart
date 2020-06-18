@@ -25,14 +25,14 @@ bio: My research focuses on utilising Bayesian inference to the study gravitatio
 
 interests:
 - Gravitational Wave Astrophysics
+- Intermediate Mass Black Holes
 - Bayesian Inference
-- Information Retrieval
 
 education:
   courses:
   - course: PhD in Astrophysics
     institution: Monash University
-    year: -
+    year: In Progress
   - course: BA in Physics and Computer Science
     institution: The College of Wooster
     year: 2018
@@ -57,6 +57,9 @@ social:
 - icon: itch-io
   icon_pack: fab
   link: https://avivajpeyi.itch.io/
+- icon: linkedin-in
+  icon_pack: fab
+  link: https://www.linkedin.com/in/vajpeyi/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
