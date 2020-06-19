@@ -10,19 +10,20 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v1
-      # with:
-      #   submodules: true
+      with:
+        submodules: true
       
     - name: 🛎 Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: 'latest'
-      
+        extended: true
+        
     - name: 🚧 Build Website
       run: hugo
 
     - name: 🚀 Deploy website to avivajpeyi/avivajpeyi.github.io
-      uses: peaceiris/actions-gh-pages@v2
+      uses: peaceiris/actions-gh-pages@v3
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         EXTERNAL_REPOSITORY: avivajpeyi/avivajpeyi.github.io
