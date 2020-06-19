@@ -12,11 +12,11 @@ jobs:
     - uses: actions/checkout@v1
       # with:
       #   submodules: true
-
+      
     - name: 🛎 Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: '0.59.1'
+        hugo-version: '0.72.0'
 
     - name: 🚧 Build Website
       run: hugo
