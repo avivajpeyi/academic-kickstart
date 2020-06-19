@@ -10,15 +10,27 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v1
+      with:
+          submodules: true 
       
     - name: 🛎 Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: 'latest'
         extended: true
-        
+        fetch-depth: 0
+    
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+          ruby-version: 2.7
+
+    - run: gem install asciidoctor
+
     - name: 🚧 Build Website
-      run: hugo
+      run: |
+        alias asciidoctor="asciidoctor --attribute=experimental=true --attribute=icons=font"
+        hugo --minify
 
     - name: 🚀 Deploy website to avivajpeyi/avivajpeyi.github.io
       uses: peaceiris/actions-gh-pages@v3
