@@ -1,3 +1,4 @@
+![website build](https://github.com/avivajpeyi/my_site_devtools/workflows/hugo%20publish/badge.svg?branch=master)
 
 # My Website Devtools
 
