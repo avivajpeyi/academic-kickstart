@@ -137,7 +137,7 @@ for(int i=n; i>0; i/=2)
 <div class="container">
   <a href="#qs8" class="btn btn-info" data-toggle="collapse">Answer</a>
   <div id="qs8" class="collapse">
-    O(?)
+    O(n)
   </div>
 </div>
 
@@ -152,6 +152,6 @@ for(int i=1; i<n*n; i++)
 <div class="container">
   <a href="#qs9" class="btn btn-info" data-toggle="collapse">Answer</a>
   <div id="qs9" class="collapse">
-    O(?)
+    O(n^4)
   </div>
 </div>
