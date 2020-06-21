@@ -14,8 +14,12 @@ This repo helps me build my website.
 Working on autodeployment... [this](https://www.morling.dev/blog/automatically-deploying-hugo-website-via-github-actions/) might help.
 
 ## TODO:
+
 [] Fix Autodeployment
+
 [] Add JSON-cv
+
 [] Add overleaf resume build
+
 
 
