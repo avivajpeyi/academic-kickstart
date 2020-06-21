@@ -11,11 +11,15 @@ This repo helps me build my website.
 - [Delpoy content on github once ready](https://sourcethemes.com/academic/docs/deployment/)
 
 ## Autodeployment 
-Working on autodeployment... [this](https://www.morling.dev/blog/automatically-deploying-hugo-website-via-github-actions/) might help.
+Working on autodeployment... [this](https://medium.com/@asishrs/automate-your-github-pages-deployment-using-hugo-and-actions-518b959a51f9) might help.
 
 ## TODO:
+
 [] Fix Autodeployment
+
 [] Add JSON-cv
+
 [] Add overleaf resume build
+
 
 

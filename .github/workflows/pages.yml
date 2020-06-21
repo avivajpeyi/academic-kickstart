@@ -25,11 +25,11 @@ jobs:
 
     - name: 🚀 Deploy website to avivajpeyi/avivajpeyi.github.io
       uses: peaceiris/actions-gh-pages@v3
-      env:
-        github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         external_repository: avivajpeyi/avivajpeyi.github.io
-        publish_branch: master
         publish_dir: ./public
+        publish_branch: master
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
         commit_message: ${{ github.event.head_commit.message }}
