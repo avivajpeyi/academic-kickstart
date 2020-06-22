@@ -45,3 +45,5 @@ def get_colors(num_colors: int, alpha: Optional[float]=1) -> List[List[float]]:
     return cs
 
 ```
+{{< figure src="example_colorblind_cols.png" title="20 colorblind cols. Note the colors are very similar after ~10." lightbox="true" >}}
+
