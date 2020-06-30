@@ -114,7 +114,7 @@ appointment_url = ""
 contact_links = [
   {icon = "github", icon_pack = "fab", name = "Check out my repos", link = "https://github.com/avivajpeyi"},
   {icon = "gitlab", icon_pack = "fab", name = "Check out my LIGO repos", link = "https://git.ligo.org/avi.vajpeyi"},
-  {icon = "itch-io", icon_pack = "fab", name = "Check out my games", link = "https://avivajpeyi.itch.io/"},
+  {icon = "gamepad", icon_pack = "fas", name = "Check out my games", link = "https://avivajpeyi.itch.io/"},
   ]
 
 ############################

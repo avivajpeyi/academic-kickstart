@@ -54,8 +54,8 @@ social:
 - icon: gitlab
   icon_pack: fab
   link: https://git.ligo.org/avi.vajpeyi
-- icon: itch-io
-  icon_pack: fab
+- icon: gamepad
+  icon_pack: fas
   link: https://avivajpeyi.itch.io/
 - icon: linkedin-in
   icon_pack: fab
