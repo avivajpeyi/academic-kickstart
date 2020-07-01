@@ -154,7 +154,7 @@ The one-sided power spectral density $\text{PSD}(f)$ (of a signal $n(t)$) is def
 \begin{equation} \label{eq:psd_calc}
 \begin{split}
 \text{PSD}(f)  &= 2 \mathcal{F}(R_{nn}(t))) \\\\
-                      &=  2 \int_{-\infty}^{+\infty}R_{nn}(\tau) e^{-if\tau}d\tau
+               &=  2 \int_{-\infty}^{+\infty}R_{nn}(\tau) e^{-if\tau}d\tau
 \end{split}
 \end{equation}
 
