@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Installing LalSuite"
+title: "Installing LalSuite from Source"
 subtitle: ""
 summary: "Source installing LalSuite sucks. Here are instructions that have worked for me."
 authors: []
