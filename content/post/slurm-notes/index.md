@@ -28,6 +28,37 @@ image:
 projects: []
 ---
  
+
+## Interactive Jobs
+
+If you want to test softwre that requires  GUI, MPI/Parallel/Multiple threads using interactive jobs may be useful.
+Note that if you need a GUI -- you'll need to `ssh` with `-X`.
+
+```bash
+sinteractive --ntasks 1 --nodes 1 --time 00:30:00 --mem 32GB
+```
+
+Once you have obtained the resources and are in the interactive job session, you can open a `jupyter` notebook with the following:
+
+1. Source envs
+2. Setup tunnel + jupyter instance on cluster
+    run:
+    ```bash
+    ipnport=$(shuf -i8000-9999 -n1)
+    ipnip=$(hostname -i)
+    echo "Run on local >>> ssh -N -L $ipnport:$ipnip:$ipnport avajpeyi@ozstar.swin.edu.au"
+    jupyter-notebook --no-browser --port=$ipnport --ip=$ipnip
+    ```
+
+3. Local connection to interactive job
+- run the command echoed above
+- open the link to the jupyer notebook (also printed in the previous window)
+
+4. Exit when done!
+
+    Otherwise the job will keep running until it times out.
+ 
+ 
 ## Plot CPU hours used for jobs
 The folowing creates a file `jobstats.txt` that contains the CPU time (seconds) for each job run bw the start+end time specified.
 ```bash
@@ -38,3 +69,6 @@ To plot the data you can use the following:
 {{< gist avivajpeyi 3beed78d92cd5f3520b4a1a93eb97cea >}}
   
 {{< figure src="cpuhrs.png" title="Total CPU hours I've used ('19-'22) " lightbox="true" >}}
+
+
+
