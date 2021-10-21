@@ -11,6 +11,7 @@ date: 2021-10-20T00:20:45+10:00
 lastmod: 2021-10-20T00:20:45+10:00
 featured: false
 draft: false
+type: book
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -28,21 +29,39 @@ image:
 projects: []
 ---
  
+{{< toc >}}
+
+
 
 ## Interactive Jobs
 
 If you want to test softwre that requires  GUI, MPI/Parallel/Multiple threads using interactive jobs may be useful.
 Note that if you need a GUI -- you'll need to `ssh` with `-X`.
 
+
+Run the following to start an interactive job:
 ```bash
 sinteractive --ntasks 1 --nodes 1 --time 00:30:00 --mem 32GB
 ```
 
-Once you have obtained the resources and are in the interactive job session, you can open a `jupyter` notebook with the following:
+Once resources are allocated, you'll notice that you're on a different machine (allocated for your interactive session).
 
-1. Source envs
+
+## Jupyter notebooks + Slurm
+
+Once are in an interactive job session you can open a `jupyter` notebook with the following steps:
+
+1. Source envs for you interactive session 
+    For example you may run the following:
+    ```bash ```
+    source ~/.bash_profile
+    module load git/2.18.0 gcc/9.2.0 openmpi/4.0.2 python/3.8.5
+    source venv/bin/activate 
+    ```
+   
 2. Setup tunnel + jupyter instance on cluster
-    run:
+   
+   To do this run the following:
     ```bash
     ipnport=$(shuf -i8000-9999 -n1)
     ipnip=$(hostname -i)
@@ -51,8 +70,8 @@ Once you have obtained the resources and are in the interactive job session, you
     ```
 
 3. Local connection to interactive job
-- run the command echoed above
-- open the link to the jupyer notebook (also printed in the previous window)
+    - run the command echoed above
+    - open the link to the jupyer notebook (also printed in the previous window)
 
 4. Exit when done!
 
