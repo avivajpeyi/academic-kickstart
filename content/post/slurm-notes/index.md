@@ -78,6 +78,23 @@ Once are in an interactive job session you can open a `jupyter` notebook with th
     Otherwise the job will keep running until it times out.
  
  
+ For convenience I have added the following to my `OzStar .bash_profile`
+ ```bash
+ # Interactive Jupter notebooks
+ alias start_ijob="sinteractive --ntasks 2 --time 00:60:00 --mem 4GB"
+ start_jupyter () {
+     ipnport=$(shuf -i8000-9999 -n1)
+     ipnip=$(hostname -i)
+     echo "Run on local >>>"
+     echo "ssh -N -L $ipnport:$ipnip:$ipnport avajpeyi@ozstar.swin.edu.au"
+     jupcmd=$(jupyter-notebook --no-browser --port=$ipnport --ip=$ipnip)
+ }
+ export -f start_jupyter
+```                     
+
+Now I can start a interactive job by running `start_ijob` and start the jupter notebook with `start_jupyter`.
+ 
+ 
 ## Plot CPU hours used for jobs
 The folowing creates a file `jobstats.txt` that contains the CPU time (seconds) for each job run bw the start+end time specified.
 ```bash
