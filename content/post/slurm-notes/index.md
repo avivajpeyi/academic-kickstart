@@ -53,7 +53,7 @@ Once are in an interactive job session you can open a `jupyter` notebook with th
 
 1. Source envs for you interactive session 
     For example you may run the following:
-    ```bash ```
+    ```bash 
     source ~/.bash_profile
     module load git/2.18.0 gcc/9.2.0 openmpi/4.0.2 python/3.8.5
     source venv/bin/activate 
@@ -73,7 +73,7 @@ Once are in an interactive job session you can open a `jupyter` notebook with th
     - run the command echoed above
     - open the link to the jupyer notebook (also printed in the previous window)
 
-4. Exit when done!
+4. Run `exit` when done!
 
     Otherwise the job will keep running until it times out.
  
