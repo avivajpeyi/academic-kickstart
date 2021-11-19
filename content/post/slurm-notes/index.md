@@ -41,7 +41,7 @@ Note that if you need a GUI -- you'll need to `ssh` with `-X`.
 
 Run the following to start an interactive job:
 ```bash
-sinteractive --ntasks 1 --nodes 1 --time 00:30:00 --mem 32GB
+sinteractive --ntasks 1 --nodes 1 --time 00:30:00 --mem 2GB
 ```
 
 Once resources are allocated, you'll notice that you're on a different machine (allocated for your interactive session).
@@ -71,7 +71,7 @@ Once are in an interactive job session you can open a `jupyter` notebook with th
 
 3. Local connection to interactive job
     - run the command echoed above
-    - open the link to the jupyer notebook (also printed in the previous window)
+    - open the link to the jupyer notebook (printed in the previous window)
 
 4. Run `exit` when done!
 
