@@ -1,0 +1,42 @@
+name: build_paper
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - cv/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Github Action for LaTeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: ./cv
+          root_file: cv.tex
+
+      - name: Move pdf
+        run: |
+          mkdir public
+          ls
+          ls cv
+          mv cv/cv.pdf public/cv.pdf
+          ls public
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v2
+        with:
+          name: avi_cv.pdf
+          path: public/cv.pdf # or path/to/artifact
+
+#      - name: Deploy 🚀
+#        uses: JamesIves/github-pages-deploy-action@releases/v3
+#        with:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          BRANCH: gh-pages
+#          FOLDER: public
+#          CLEAN: true
