@@ -1,0 +1,624 @@
+%!TEX TS-program = lualatex
+\documentclass[]{friggeri-cv}
+
+\usepackage{ifthen}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{smartdiagram}
+\usepackage{fontspec}
+\usepackage{bibentry}
+\usepackage[document]{ragged2e} %% Left justifies text
+
+\newcommand{\detail}[1]{\par\noindent\hangindent=\mylen\hangafter1--\,\,#1}
+\newlength{\mylen}
+\settowidth{\mylen}{--\,\,}
+
+% if you want to add fontawesome package
+% you need to compile the tex file with LuaLaTeX
+% References:
+%   http://texdoc.net/texmf-dist/doc/latex/fontawesome/fontawesome.pdf
+%   https://www.ctan.org/tex-archive/fonts/fontawesome?lang=en
+% %%%%%%% FONT AWESOME STUFF
+\usepackage[x11names]{xcolor}
+%\usepackage{array}
+
+\usepackage{fontspec}
+%\setmainfont{Minion Pro}
+\usepackage{fontawesome}
+
+\def\faSkype{\FA\symbol{"F17E}}
+\def\faLinux{\FA\symbol{"F17C}}
+\def\faTh{\FA\symbol{"F00A}}
+\def\faQuoteLeft{\FA\symbol{"F10D}}
+\def\faQuoteRight{\FA\symbol{"F10E}}
+
+\def\faLinkedIn{\FA\symbol{"F08C}} %F0E1
+\def\faCellphone{\FA\symbol{"F095}}
+\def\faGithub{\FA\symbol{"F09B}}
+ \def\faEmail{\FA\symbol{"F2B7}}
+ \newcommand{\bigO}{\mathcal{O}}
+
+ \definecolor{SkypeBlue}{HTML}{12A5F4}
+
+% %%%%%%% FONT AWESOME STUFF
+
+\usepackage{metalogo}
+\usepackage{dtklogos}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,shadows}
+\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,           % no lik border color
+    allbordercolors=white       % white border color for all
+}
+
+
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.5cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.5cm,
+    % specifies which is the distance among the bubble center node and the other bubbles
+    distance center/other bubbles = 0.3cm,
+    % sets the distance from the text to the border of the bubble center node
+    distance text center bubble = 0.5cm,
+    % set center bubble color
+    bubble center node color = pblue,
+    % define the list of colors usable in the diagram
+    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.6,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 0.5,
+}
+
+
+\nobibliography{publications}
+
+\begin{document}
+
+
+\header{}{Avi Vajpeyi}
+     %{Physics, Computer Science, Rock Climbing}
+
+% Fake text to add separator
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+.....
+}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  \includegraphics[scale=0.13]{img/avi_roundNew.png}
+  \section{Contact}
+    %{\faCellphone} +917 715 9580
+    +917 715 9580
+    {\faEmail{}}\href{mailto:avi.vajpeyi@gmail.com}{{avi.vajpeyi@gmail.com}}
+   {\color{SkypeBlue}\faSkype}   avi.vajpeyi
+    ~
+    ~
+  \section{Programming}
+    \textbf{C/C++\\}%\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{Obj-C\\}%\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{Python\\}%\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{C\#\\}%\includegraphics[scale=0.40]{img/3stars.png}
+    \textbf{Matlab\\}%\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{Mathematica\\}%\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{OpenCL}
+    \textbf{SQL\\}
+
+%    \textbf{Mathmtica}\includegraphics[scale=0.40]{img/2stars.png}
+%    \textbf{Haskell}\includegraphics[scale=0.40]{img/1stars.png}
+%    \textit{1 star \textasciitilde 500 lines}
+    ~
+    ~
+    \section{\href{https://github.com/avivajpeyi/Work-Files/blob/master/Avi_UnofficialTranscript_120916.pdf}{Recent Courses}}
+    Machine Learning
+    General Relativity
+    Computational Physics
+    Algorithm Analysis
+    User Interface Design
+    Prog Languages
+    Comp Organisation
+    Databases
+    Quantum Mechanics
+~
+    ~
+  \section{Non Academic Interests}
+    Rock Climbing
+    Varsity Track Team
+    Piano
+    Taekwondo
+%   Table Tennis
+    Math Modelling
+    Puerto Rican Salsa
+    Programming Puzzles
+%    Video-game Design
+    ~
+    ~
+     ~
+     ~
+     ~
+  \section{Links}
+    %\href{http://mywebsite.com}{mywebsite.com}
+    \href{https://github.com/avivajpeyi}{github.com/avivajpeyi}
+    \href{https://connect.unity.com/u/5839ddf732b306002a9e7422}{unity.com/avivajpeyi}
+    %{\faLinkedIn{}} \href{https://www.linkedin.com/in/vajpeyi}{vajpeyi}
+    \href{https://www.linkedin.com/in/vajpeyi}{ linkedin.com/in/vajpeyi}
+\end{aside}
+
+\section{Education}
+\begin{entrylist}
+  \entry
+    {08/14–05/18}
+    {B.A. in Physics and Computer Science, Honours}
+    {\href{https://www.wooster.edu/}{The College of Wooster}}
+    {\emph{Summa Cum Laude}\\
+    \emph{Cumulative GPA:} 4.0 $/$ 4.0\\
+    \emph{Selective Awards:} Commencement Speaker, Best Paper Award: 2017 MCURCSM, 1st Place OH5 Libraries Hackathon\\
+    \emph{Honour Societies:} Phi Beta Kappa, Pi Mu Epsilon}
+\end{entrylist}
+%
+\section{Research}
+\begin{entrylist}
+\entry
+    {08/17–05/18}
+    {\href{}{Sr. Thesis—Granular Flow with CUDA and OpenCL}}
+    {\href{https://www.wooster.edu/}{The College of Wooster}}
+    {
+    •   Developed two computer simulations to study avalanches on a conical bead pile using graphical processing units.\\
+    •   Used NVIDIA Flex physics engine on CUDA for the first simulation \\
+    •   Created my own physics engine on OpenCL for the second simulation.\\
+    •   Improved computational complexity from prior work from $\bigO(n^2)$ to $\bigO(n^{1.2})$.\\
+    •   Defended 143-page thesis during a 2-hour session.\\
+    •	Work is being continued as an NSF funded REU program.\\
+    •	\emph{Presentation:} American Physical Society, March 2018 (12 minutes).0\\}
+\entry
+    {01/16–12/17}
+    {\href{https://github.com/avivajpeyi/Chaos_CS200}{Independent Research—Chaotic Scattering}}
+    {\href{https://www.wooster.edu/}{The College of Wooster}}
+    {
+    •	Created an Obj-C application to study chaotic and non-chaotic trajectories of particles scattering in regions with hills, valleys, and 2D sine planes. \\
+    •	Discovered a new chaotic scattering regime in systems with valleys—in place of hills—and studied the fractal patterns present in the systems. \\
+    •	Studied different numerical integration techniques and performed a case study on the Runge-Kutta 4 and Euler-Cromer techniques.\\
+    •	\emph{Presentations:} Consortium for Computing Sciences in Colleges, April 2017 (poster) and Mid-states Conference For Undergraduate Research in Computer Science and Mathematics—won the best paper presentation award, Nov 2018 (20 minutes).\\ }
+\entry
+    {06/17–08/17}
+    {\href{http://meetings.aps.org/Meeting/OSF17/Session/D1.18}{NSF Physics Research—Filtering Gravitational Waves}}
+    {\href{http://en.uniroma1.it/}Sapienza University}
+    {•	Wrote Matlab scripts to create two dimensional fast Fourier transform filters to enhance the SNR of simulated r-mode gravitational wave signals in the presence of varying levels of white noise and frequency glitches.\\
+    •	Developed a convolutional neural network with TensorFlow to perform classification and parameter estimation for r-mode gravitational waves. \\
+    •	\emph{Presentation:} Max Planck Institute for Gravitational Physics, Hanover, Germany, Aug 2017 (20 minutes), and the Ohio-Region Section of the American Physical Society, Nov 2017 (poster).\\ }
+
+  \entry
+    {02/17–05/17}
+    {\href{}{Junior Research—Quantum Memory}}
+    {\href{https://www.wooster.edu/}{The College of Wooster}}
+    {
+    •	Investigated and constructed a theoretical model of how the geometric phase of light alters as the polarisation states of light evolve.\\
+    •	Developed Mathematica script to create interference patterns due to the interference of light with and without geometric phase. \\
+    •  Tested the theoretical model's interference patterns by comparing them with previous predictions for particular cases.\\
+    •	\emph{Presentation:} The College of Wooster (12 minutes).\\}
+     \end{entrylist}}
+     \begin{entrylist}
+  \entry
+    {06/16–08/16}
+    {\href{https://github.com/avivajpeyi/2016LIGOProject}{LIGO Undergrad Research—Binary Black Hole Detection}}
+    {\href{https://www.ligo.caltech.edu/} {LIGO Caltech}}
+    {
+     •	\href{http://tinyurl.com/aviLigo2016}{Investigated an alternative detection statistic to SNR, the `Bayes Factor', to improve the detection of Binary Black Hole Systems.}\\
+    •	Wrote Python code to calculate the Bayes Factor for noise events in LIGO strain data from the 2015 observation run.\\
+    •   Wrote a research proposal based on this work for the Barry Goldwater scholarship which received a honourable mention.\\
+    •   The work is being continued by other researchers and a paper has been submitted to PRL.\\
+    •	\emph{Presentation:} LIGO-Caltech (12 minutes).\\
+    }
+    \end{entrylist}
+\begin{entrylist}
+ \entry{08/16–02/17}
+    {Software Engineering Assistant—GitKeeper}
+    {\href{https://www.wooster.edu/}{The College of Wooster}}
+    {•  Developed and tested back-end Python scripts for Git-keeper, a system for collecting and automatically testing student programming assignments. \\
+    •   Adapted Git-keeper to better suit user needs.\\}
+
+    \entry
+    {06/15–06/16}
+    {\href{http://physics.wooster.edu/REU/projects.html}{NSF Physics Research—Avalanching Bead Piles}}
+    {\href{https://www.wooster.edu/}{The College of Wooster}}
+    {
+    •	Analysed the effect of input energy and cohesive forces on avalanche behaviours with a pile of metallic beads.\\
+    •	Tracked beads velocities with C++ and Matlab code. \\
+    •   Worked with electronic systems, LabVIEW, Mathematica, IgorPro and statistical data analysis.\\
+    •	\emph{Presentation:} American Physical Society, March 2016 (poster)\\}
+
+    \entry
+    {01/15–06/15}
+    {Sophomore Research—Code Reading}
+    {\href{https://www.wooster.edu/}{The College of Wooster}}
+    {
+    •	Analysed code-reading patterns in novice programmers.\\
+    •	Reviewed strategies on how students can better understand code.\\
+    •	Created exercises to help students learn how to read code efficiently.\\
+    }
+\end{entrylist}
+% \newpage
+
+\begin{aside}
+~
+~
+~
+~
+  \section{Places Lived}
+Wooster, OH, USA
+Rome, Italy
+New York City, USA
+Kolkata, India
+Darjeeling, India
+~
+~
+~
+~
+\section{Languages}
+\textbf{English}\includegraphics[scale=0.40]{img/5stars.png}
+\textbf{Hindi}\includegraphics[scale=0.40]{img/4stars.png}
+    ~
+    ~
+    ~
+    ~
+    \section{Online Courses}
+    -Unity Game Physics
+    -Developers Course for Unity
+    ~
+~
+~
+\end{aside}
+
+
+\section{Teaching and Grading Experience}
+\begin{entrylist}
+  \entry
+    {08/16-12/16}
+    {Calculus Physics 2 Lab Assistant}
+    {}
+    {Help introductory physics students with lab experiments and data analysis.\\}
+  \entry
+    {08/16-12/16}
+    {Modern Physics Lab Assistant}
+    {}
+    {Help students with lab experiments, scientific writing, and presentation of data. Tutored LaTeX and IgorPRO, data analysis tool. Assisted in experiments including the Millikan Electron Charge, Einstein Photoelectric Effect and Rutherford Scattering experiments.\\}
+    \entry
+    {08/15-12/15}
+    {Experiential Entrepreneurship—Leadership for a Better World}
+    {}
+    {Develop student leadership through the Social Change Model of Leadership Development program.\\}
+  \entry
+    {08/15-12/15}
+    {Data Structures and Algorithms Teaching Assistant}
+    {}
+    {Support software development skills including testing and documentation in OOP, with a focus on C++.\\}
+    \entry
+    {08/15-12/15}
+    {Computer Science Grader}
+    {}
+    {Graded 15 assignments a week in introductory C programming. \\}
+    \entry
+    {08/15-12/15}
+    {Centre for Diversity and Inclusion—Global Engagement TA}
+    {}
+    {Stimulated class discussions on a wide range of social and cultural topics; and helped with class management. \\}
+\end{entrylist}
+\newpage
+
+
+\begin{aside}
+~
+~
+~
+~
+\section{Conferences Presented At}
+March 2018 APS
+2017 MCURCSM
+Fall 2017 OSAPS
+Spring 2017 CCSCNE
+March 2016 APS
+~
+~
+~
+~
+~
+~
+~
+~
+~~~~~~~~~
+\section{TensorFlow Projects}
+-CNN for GWs
+-Emotions in piano music
+-Word to Vector for libraries
+~
+~
+~
+\section{Robotics Projects}
+-LED light cube
+-Sign language (ASL)
+interpreter (incomplete)
+\end{aside}
+
+\section{Projects}
+\begin{entrylist}
+ \entry{03/18–Now}
+ {Database Project: Messaging Website}
+ {Python}
+ {Created a messaging application using Flask and SQLite using a RESTful approach. Currently extending project by adding a chatbot. \\}
+
+  \entry{04/18–04/18}
+ {Ludum Dare 41 Project: Turn-based Driving Videogame}
+ {Unity}
+ {Created a turn-based driving game in response to the Ludum Dare's theme of merging two incompatible game types. Game was highlighted in the local newspaper of Wooster, OH. \\}
+
+ \entry{01/18–02/18}
+ {OpenCL Project: Collision Simulations}
+ {OpenCL}
+ {Created Obj-C applets to study soft- and hard-sphere collisions. Wrote the physics engines to detect and handle collisions with OpenCL. \\}
+
+ \entry{11/17–12/17}
+ {OpenCL Project: N-body Simulation}
+ {OpenCL}
+ {Created an Obj-C applet to simulate N-bodies interacting with gravity. Wrote two physics engines for the applet, the first runs on the CPU and the second on the GPU with OpenCL.\\}
+
+ \entry{03/17–05/17}
+ {Emotion Analysis in AIDuet}
+ {TensorFlow}
+ {Created a neural network on TensorFlow to classify piano music as happy or sad based on pitches, similar to semantic analysis for text. Collected and labelled piano music data to train and test the neural network. Added the neural net to a copy of Google's AIDuet to classify music played by the user as happy or sad in realtime.\\}
+  \end{entrylist}
+\begin{entrylist}
+
+ \entry
+    {11/16–05/17}
+    {\href{https://connect.unity.com/u/5839ddf732b306002a9e7422}{Study of UI in Videogames}}
+    {Unity}
+    {{Created an FPS zombie survival game with two other students. Included our own animations, level map and GUI in the game. Split-tested game UI to better understand its affect on user experience and user behaviour in FPS games. Reported our findings to our User Interface and Design class. Plan on publishing the game on Steam.\\}%{Developed two versions of a FPS zombie survival game with two classmates. One version has standard FPS UI consisting of a HUD with health and ammo, reload and shooting sounds, etc. The other version has mismatched UI signifiers. For example, traditional sounds are switched with nontraditional ones  (for example, we switched gunshot sounds to reload sounds). }
+    }
+ \entry
+    {03/16–04/16}
+    {\href{https://github.com/nguyen-khoa/CS200Lab4}{Depth First Search Maze Solver}}
+    {C++}
+    {Built a maze using equivalence classes and the Union-Find algorithm. The maze and its path were visualised with GLUT and OpenGL. \\}
+\entry{09/16–10/16}{\href{Obj-C}{Trajectory Calculations for Spacecrafts}}{Obj-C}{Collaborated on a project to plot rocket trajectories to nearby planets.\\}
+ \entry{03/16-06/16}{Simulation of Cancer Growth}{Obj-C}{Simulated random walks on the surface of spheres to model cancer growth.\\}
+\entry{03/16-04/16}{\href{https://github.com/avivajpeyi/Physics_objectiveC_apps/tree/master/QuantumWell}{Finite Quantum Well Applet}}{Obj-C}{Created an applet for the time-dependant Schrodinger Wave Equation.\\}
+ \end{entrylist}
+
+
+\section{Work Experience}
+\begin{entrylist}
+  \entry
+    {08/15-05/18}
+    {Resident Assistant}
+    {}
+    {Managed a college residence hall of around 30 undergraduate students.
+    \begin{itemize}
+        \item Enforced campus policies to create a safe, orderly, and enjoyable living environment for the residents.
+        \item Ran floor meetings and conduct frequent room drop-ins to maintain transparent communications.
+         \item Conducted programs on diversity, chemical abuse, personal development, relationships, LGBTQ+, and academic performance.
+         \item Managed administrative tasks including room condition reports, maintenance requests, incident reports, and the room change process.
+    \end{itemize}
+     \\}
+       \end{entrylist}
+\begin{entrylist}
+
+  \entry
+    {08/15-12/17}
+    {Scot Lanes}
+    {}
+    {Managed client access to bowling alley and routine maintenance of lanes.\\}
+           \end{entrylist}
+\begin{entrylist}
+    \entry
+    {08/14-06/16}
+    {Security and Protective Services}
+    {}
+    {Supported campus security by patrolling buildings.\\}
+\end{entrylist}
+
+
+\section{Activities \& Leadership}
+\begin{entrylist}
+
+  \entry {08/15-05/18} {Varsity Men’s Track and Field,  D-III}{}{Competed in short distance sprint events.\\}
+
+    \entry {04/18-04/18} {\href{https://www.youtube.com/watch?v=G8b9vDgItpo&t=11s}Woo Game Jam, Hackathon}{}{Organised a satellite event of Ludum Dare 41 (a 48-hour international video game creation hackathon) on campus with one other student. Arranged tutorials for participants, organised video talks with alumni in video-game related industries, designed t-shirts, and arranged all logistics. Participated in the hackathon and made a turn-based driving game with my team.\\}
+   \end{entrylist}
+\begin{entrylist}
+  \entry{4/18-4/18}{Miami University 48-hour DataFest}{}{Analysed a data file with more than 17-million rows using Python and visualised the results using Tableau. As the data is being reused in other competitions, more information cannot be disclosed about this until June, 2020.\\}
+
+    \entry{3/17-3/17}{OH5 Libraries Newspaper Hackathon}{}{Created vector representations of newspaper text (from campus newspapers from the 1970's-2010) and provided 3-D visualisation of the vectorised words with TensorFlow embeddings in 48 hours. Demonstrated how the association of certain words changed with time. Our work was ranked 1st place.\\}
+    \end{entrylist}
+\begin{entrylist}
+
+  \entry {10/16-10/16} {The University Physics Competition}{}{48-hour team investigation into the best way to send nuclear waste to the sun and the asteroid belt using Objective-C. The program used gravity assists and Kepler's Laws of Planetary motion to help plot the path of the rocket and the planets. \\}
+
+
+
+     \entry{4/16-4/16}{OHI\textbackslash O Hackathon}{}{Designed a equipment-loaning application for the Ohio State hackathon with three students.\\}
+
+
+
+     \entry{4/16 - 4/16}{President: Table Tennis Club}{}{Responsible for developing and maintaining the budget for the club, organising practice sessions for members and hosting an inter-mural tournament at the College of Wooster. \\}
+
+
+ \entry{1/15-08/16}{Co-Chair, South Asia Committee}{}{Organised and coordinated social events to engage the college community in South Asian culture, traditions, and current affairs. Responsible for developing student-retention strategies by strengthening the South Asian community at the college. \\}
+
+   \entry{1/15-1/16}{Co-Chair, Student Services, Student Gov.}{}{Focused on improving the quality of life for students by providing services including shuttles to the airport and extra hours for the library during examination weeks. \\}
+
+    \entry{3/15-3/15}{Honourable Mention, Math Modelling Competition}{}{A 96-hour high-pressure international contest for undergraduate student-teams from over 900 institutions. The contest challenged students to clarify, analyse, and propose solutions to open-ended problems. Placed in the top 30\% of the contestants and the three-member team was awarded an honourable mention for our paper on the eradication of Ebola. \\}
+
+
+\end{entrylist}
+
+
+
+\begin{aside}
+~
+~
+~
+~
+\section{Favourite Climbing Route}
+King Me
+Red River Gorge
+5.11b
+~
+~
+\end{aside}
+
+\section{Honours \& Awards}
+\begin{entrylist}
+
+    \entry
+    {2018}
+    {Student Commencement Speaker }
+    {Recognition}
+    {\emph{Student speaker at the College of Wooster 2018 commencement.\\}}
+         \end{entrylist}
+\begin{entrylist}
+    \entry
+    {2018}
+    {The Jonas O. Notestein Prize}
+    {Award}
+    {\emph{Awarded for highest GPA in the graduating class.\\}}
+
+
+    \entry
+    {2018}
+    {The Arthur H. Compton Prize in Physics}
+    {Award}
+    {\emph{Awarded for the highest standing in physics.\\}}
+
+    \entry
+    {2017}
+    {MCURCSM 2017: Best Paper Presentation}
+    {Award}
+    {\emph{Awarded at the 2017 Mid-states Conference For Undergraduate Research in Computer Science and Mathematics.\\}}
+
+    \entry
+    {2017}
+    {NCAA D-III Academic Honour Roll}
+    {Award}
+    { \emph{Awarded to student-athletes participating in a National Collegiate Athletic Association (NCAA) sport for their institution with a GPA of 3.50 or above.}\\}
+
+
+  \entry
+    {2017}
+    {Dean's List and Scholarship}
+    {Scholarship}
+    { \emph{Dean's List: Fall 2014, Spring 2015, Fall 2015, Spring 2016, Fall 2016, Spring 2017. Awarded the Dean's Scholarship, an award for overall academic achievement, extracurricular involvement, leadership, and personal merit.}\\}
+
+
+    \entry{2017}{Phi Beta Kappa}{Honour Society}{\emph{Invited in my junior year, an honour given to extremely select students, as this invitation is normally only for seniors. Each chapter sets its own academic standards, but all inductees must have studied the liberal arts and sciences, demonstrated ``good moral character'', and, usually, earned grades placing them in the top tenth of their class.\\}}
+
+
+    \entry{2017}{Pi Mu Epsilon}{Honour Society}
+    {\emph{A mathematics honour society for students expressing distinction in mathematics.\\}}
+
+    \entry
+    {2017}
+    {OH5 Hackathon 1st Place}
+    {Competition}
+    {\emph{Awarded prize for team work on vectorisation of text in newspaper articles.}\\}
+
+    \entry
+    {2017}
+    {Edward Taylor Prize}
+    {Recognition}
+    {\emph{Awarded to students with the highest academic standing in their first and sophomore years.}\\}
+
+     \entry
+    {2016}
+    {Joseph Albertus Culler Prize in Physics}
+    {Recognition}
+    { \emph{Awarded to first or second year students for attaining the highest rank in general college physics. }\\}
+
+
+
+    \entry
+    {2016}
+    {Elias Compton Freshman Prize}
+    {Recognition}
+    { \emph{Awarded to the student who has achieved the highest standing in scholarship during the first year, recognising academic excellence. }\\}
+
+    \end{entrylist}
+   \begin{entrylist}
+     \entry{2013}
+    {District Science Fair}
+    {Competition}
+    {\emph{Awarded the first prize in the Darjeeling Science Fair demonstrating the physics behind a submarine with a handmade working model.\\}}
+
+    \end{entrylist}
+   \begin{entrylist}
+    \entry
+    {2012}
+    {Mountaineering Course}
+    {Completion}
+    { \emph{Awarded an ‘A’ Grade in the Himalayan Mountaineering Institute’s course in mountaineering.}\\}
+
+      \entry
+    {2012}
+    {Duke of Edinburgh Award}
+    {Award}
+    { \emph{Received the first level award for academic merit, community involvement, social service and leadership skills.}\\}
+
+\end{entrylist}
+
+
+\newpage
+
+\section{Publications}
+%% USE: https://www.monperrus.net/martin/bibtex2latex
+\noindent{\sc Submitted to Phys. Rev. Lett}
+\begin{description}
+\item[2018]{\bf Enhancing confidence in the detection of gravitational waves from compact binaries via Bayesian model comparison} (Maximiliano Isi, Rory Smith, Salvatore Vitale, T. J. Massinger, Jonah Kanner, Avi Vajpeyi), {\em arXiv:1803.09783}.
+\end{description}
+%\href{https://arxiv.org/abs/1803.09783}
+\noindent{\sc Refereed Articles}
+\begin{description}
+\item[2017]{\bf Chaotic Scattering in Hill and Valley Systems} (Avi Vajpeyi, John Lindner and Denise Byrnes), {\em Proceedings of the Midstates Conference for Undergraduate Research in Computer Science and Mathematics}, DePauw University, 2017.
+\end{description}%\href{http://dpuadweb.depauw.edu/stevenbogaerts_web/mcurcsm/}
+\noindent{\sc Conference Presentations}
+\begin{description}
+\item[2018]{\bf Simulation of a Granular Flow Experiment Using GPU Parallelism} (Avi Vajpeyi, John Lindner, Susan Lehman and Denise Byrnes), {\em APS March Meeting Abstracts}, APS, 2018.
+\item[2017]{\bf Enhancing Long Transient Gravitational Wave Power Spectra with Filters} (Avi Vajpeyi, Andrew Miller, Pia Astone and Sergio Frasca), {\em APS Ohio Sectional Meeting Abstracts}, APS, volume 62, 2017.
+\item[2017]{\bf Tracking particles during avalanches on a conical bead pile} (Haidar Esseili, Avi Vajpeyi and Susan Lehman), {\em APS March Meeting Abstracts}, 2017.
+\item[2016]{\bf Improving detection of avalanches on a conical bead pile} (Avi Vajpeyi, Susan Lehman, Karin Dahmen, Michael LeBlanc and Jonathan Uhl), {\em APS March Meeting Abstracts}, 2016.
+\item[2016]{\bf Tuning Parameters and Scaling For Avalanches On A Slowly-Driven Conical Bead Pile with Cohesion} (Susan Lehman, DT Jacobs, Paroma Palchoudhuri, Avi Vajpeyi, Justine Walker, Karin Dahmen, Michael LeBlanc and Jonathan Uhl), {\em APS Meeting Abstracts}, 2016.\\
+\end{description}
+
+
+\section{Certifications}
+\begin{entrylist}
+  \entry
+    {02/2013}
+    {National Student Leader}
+    {}
+    {\emph{{Certified Student Leader at the National Conference on Student Leadership, Washington, D.C.}}}
+\end{entrylist}
+
+
+
+% \section{Other Info}
+% For the Italian job market:\\
+% \emph{Si autorizza il trattamento delle informazioni contenute nel curriculum in conformità alle disposizioni previste dal d.lgs. 196/2003. Si dichiara altresì di essere consapevole che, in caso di dichiarazioni non veritiere, si è passibili di sanzioni penali ai sensi del DPR 445/00 oltre alla revoca dei benefici eventualmente percepiti.}
+% \\
+\begin{flushleft}
+\emph{\today}
+\end{flushleft}
+\begin{flushright}
+\emph{Avi Vajpeyi}
+\end{flushright}
+\end{document}
+
+
