@@ -13,14 +13,7 @@
 \usepackage[russian,english]{babel}         % Language styles
 \usepackage{graphicx}                       % Importing graphics
 \usepackage[export]{adjustbox}              % Aligning margins
-
-% % Chinese
-% \usepackage{xeCJK}
-% \setCJKmainfont{BabelStone Han}
-
-% % Cyrillic/Russian
-% \usepackage{hyphenat}
-% \babelfont{rm}{Droid Sans}
+\usepackage{fontawesome}
 
 % Styling
 \pagestyle{fancy}
@@ -43,7 +36,7 @@
 % Define colors
 \definecolor{color-text}{gray}{0.10}    % light black
 \definecolor{color-detail}{gray}{0.40}  % dark gray
-\colorlet{color-title}{\theme}          % black
+\colorlet{color-title}{\theme}          % user chosen
 
 % Set text color
 \makeatletter
@@ -52,7 +45,8 @@
 \AtBeginDocument{\globalcolor{color-text}}
 
 % Shorthand
-\newcommand{\github}[1]{\href{https://github.com/#1/}{github.com/#1}}
+\newcommand{\github}[1]{\href{https://github.com/#1/}{\texttt{github.com/#1}}}
+\newcommand{\gitligo}[1]{\href{https://git.ligo.org/#1/}{\texttt{git.ligo.org/#1}}}
 \newcommand{\email}[1]{\href{mailto:#1}{#1}}
 \newcommand{\website}[1]{\href{https://#1/}{#1}}
 \newcommand{\linkedin}[1]{\href{https://www.linkedin.com/in/#1/}{#1}}
@@ -122,11 +116,13 @@
 
 \newcommand{\entrymid}[4][]{
     \item[#1] \small{#2} \hfill \small{#3}
-    \vspace{-\smallskipamount} \item[]\small{\textit{#4}}}
+    \vspace{-\smallskipamount} \item[]\small{ \textcolor{color-detail}{#4} }}
+
+
 
 \newcommand{\entrybig}[5][]{\item[#1]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    #2 & #3 \\ {\small#4} & {\small #5} \\ \end{tabular*}}
+    {#2} & {\textcolor{color-title}{#3}} \\ {\small#4} & {\small #5} \\ \end{tabular*}}
 
 % Fill year
 \newcommand{\fillyear}[1]{\phantom{#1}}
