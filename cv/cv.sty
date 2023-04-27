@@ -38,6 +38,7 @@
 \definecolor{color-detail}{gray}{0.40}  % dark gray
 \colorlet{color-title}{\theme}          % user chosen
 
+\newcommand{\mycol}[1]{\textcolor{color-title}{#1}}
 % Set text color
 \makeatletter
 \newcommand{\globalcolor}[1]{\color{#1}\global\let\default@color\current@color}
@@ -136,10 +137,10 @@
 
 \renewcommand{\mkbibnamegiven}[1]{%
   \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
-  {\mkbibbold{#1}}{#1}%
+  {\textcolor{color-title}{\mkbibbold{#1}}}{#1}%
 }
 
 \renewcommand{\mkbibnamefamily}[1]{%
   \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
-  {\mkbibbold{#1}}{#1}%
+  {\textcolor{color-title}{\mkbibbold{#1}}}{#1}%
 }
