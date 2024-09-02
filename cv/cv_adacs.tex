@@ -1,0 +1,65 @@
+\documentclass[letterpaper,11pt]{article}
+
+
+% Choose theme, e.g. black, RedViolet, ForestGreen, MidnightBlue
+\def\theme{MidnightBlue}
+
+
+\usepackage[style=ieee,url=true,doi=false,maxbibnames=99,sorting=ydnt,dashed=false]{biblatex}
+
+\usepackage{cv}
+\input{extras}
+
+\boldname{Vajpeyi}{Avi}{A.}
+
+
+
+\bibliography{papers/papers}
+
+
+
+\begin{document}
+
+% Heading
+\headinginline{Avi Vajpeyi}{
+    \website{avivajpeyi.github.io} \\ 
+    \website{github.com/avivajpeyi}
+}
+
+
+% Page One
+\import{sections/}{education.tex}
+\import{sections/}{research.tex}
+\import{sections/}{industry.tex}
+
+\pagebreak
+
+% Page Two
+
+{\import{sections/}{publications.tex}}
+\begin{minipage}[t]{0.47\textwidth}
+{\import{sections/}{talks.tex}}
+{\import{sections/}{outreach.tex}}
+\end{minipage} \hspace{0.04\textwidth} \begin{minipage}[t]{0.46\textwidth}
+{\import{sections/}{grants.tex}}
+{\import{sections/}{hackathons.tex}}
+\end{minipage}
+
+\pagebreak
+
+\begin{minipage}[t]{0.47\textwidth}
+{ \import{sections/}{teaching.tex}}
+\end{minipage} \hspace{0.04\textwidth} \begin{minipage}[t]{0.46\textwidth}
+{\import{sections/}{awards.tex}}
+\import{sections/}{references.tex}
+\end{minipage}
+
+
+% \pagebreak
+% \import{sections/}{personal_info.tex}
+
+
+
+
+
+\end{document}
